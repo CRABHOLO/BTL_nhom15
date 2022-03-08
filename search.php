@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>.:PetShop:.</title>
+	<title>Cậu Vàng Shop</title>
 	<link href="public/css/cssindex.css" rel="stylesheet" type="text/css"/>
 	<link href="public/css/header.css" rel="stylesheet" type="text/css"/>
 	<link href="public/css/log.css" rel="stylesheet" type="text/css"/>

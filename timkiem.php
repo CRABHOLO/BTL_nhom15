@@ -6,7 +6,7 @@
     <link href="public/css/cssindex.css" rel="stylesheet" type="text/css"/>
     <link href="public/css/header.css" rel="stylesheet" type="text/css" />
     <link href="public/css/log.css" rel="stylesheet" type="text/css" />
-    <title>.:PetShop:.</title>
+    <title>Cậu Vàng Shop</title>
 </head>
 
 <body bgcolor="#CCCCCC">
