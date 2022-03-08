@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 30, 2018 lúc 08:50 AM
--- Phiên bản máy phục vụ: 10.1.32-MariaDB
--- Phiên bản PHP: 7.2.5
+-- Thời gian đã tạo: Th3 08, 2022 lúc 03:23 PM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -42,7 +41,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`IDAD`, `Hoten`, `SDT`, `Email`, `MatKhau`, `ChucVu`) VALUES
-(1, 'Admin', '0989954169', 'hoangvanlamcntt@gmail.com', '123456', 0);
+(1, 'Admin', '0989954169', 'hoanglong01@gmail.com', '123456a', 0),
+(2, 'Admin', '0989954168', 'thuchoang01@gmail.com', '123456b', 0),
+(3, 'Admin', '0989954167', 'minhtinh01@gmail.com', '123456c', 0)
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,6 @@ CREATE TABLE `chungloai` (
 --
 
 INSERT INTO `chungloai` (`idCL`, `tenCL`, `iconCL`, `idLoaiSP`) VALUES
-('', 'Kangguru', '', 1),
 ('CL01', 'Chó', 'cho.png', 1),
 ('CL02', 'Thỏ', 'tho.png', 1),
 ('CL03', 'Chuột', 'chuot.png', 1),
@@ -246,7 +246,7 @@ CREATE TABLE `hoadon` (
   `IDHD` int(11) NOT NULL,
   `IDKH` int(11) DEFAULT NULL,
   `NgayLap` date NOT NULL,
-  `TongTien` double NOT NULL DEFAULT '0',
+  `TongTien` double NOT NULL DEFAULT 0,
   `SoDienThoai` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -352,82 +352,6 @@ INSERT INTO `loaisanpham` (`idLoaiSP`, `tenLoaiSP`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `longthu`
---
-
-CREATE TABLE `longthu` (
-  `idLongThu` varchar(10) NOT NULL,
-  `idCL` varchar(10) NOT NULL,
-  `tenLongThu` varchar(50) NOT NULL,
-  `hinhLongThu` varchar(30) NOT NULL,
-  `giaLongThu` int(10) NOT NULL,
-  `soLuongThuTrongLong` int(11) NOT NULL,
-  `moTaLongThuNuoi` varchar(10000) NOT NULL,
-  `idLoaiSP` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `longthu`
---
-
-INSERT INTO `longthu` (`idLongThu`, `idCL`, `tenLongThu`, `hinhLongThu`, `giaLongThu`, `soLuongThuTrongLong`, `moTaLongThuNuoi`, `idLoaiSP`) VALUES
-('Long01', 'CL05', 'Lồng Bầu', 'Lồng Bầu,Jjpg', 1400, 1, 'Phù hợp với nuôi chào mào có tật bu lồng, ngoái, lộn.', 3),
-('Long02', 'CL05', 'Lồng Đấu Tre', 'Lồng Đấu Tre.jpg', 900, 1, 'Đáy lồng làm bằng tre, đẹp, sang trọng.', 3),
-('Long03', 'CL05', 'Lồng Kỹ', 'Lồng Kỹ.jpg', 1200, 1, 'Thanh lồng mảnh, cứng tuyệt đối.', 3),
-('Long04', 'CL05', 'Lồng Tròn', 'Lồng Tròn.jpg', 1100, 1, 'Phù hợp với nuôi chào mào có tật bu lồng, ngoái, lộn.', 3),
-('Long05', 'CL01', 'Dây Dắt Trợ Lực', 'Dây Dắt Trợ Lực.jpg', 90, 1, '\"Để giải quyết sự băn khoăn cho các khổ chủ: Làm thế nào để đi chơi cho thoải mái mà thú cưng của mình không bị bắt mắt, hay nó chạy đi mất .Chất liệu chắc chắn và thiết kế dày dặn cho độ bền cao, đồng thời tạo cảm giác êm ái khi đeo. Thiết kế khóa giúp bạn dễ dàng đeo hoặc tháo mở dây và vòng một cách nhanh chóng.\"', 3),
-('Long06', 'CL01', 'Dây Giữ Chó trên Ô Tô', 'Dây Giữ Chó trên Ô Tô.jpg', 60, 1, '\"Để giải quyết sự băn khoăn cho các khổ chủ: Làm thế nào để đi chơi cho thoải mái mà thú cưng của mình không bị bắt mắt, hay nó chạy đi mất .Chất liệu chắc chắn và thiết kế dày dặn cho độ bền cao, đồng thời tạo cảm giác êm ái khi đeo. Thiết kế khóa giúp bạn dễ dàng đeo hoặc tháo mở dây và vòng một cách nhanh chóng.\"', 3),
-('Long07', 'CL01', 'Dây Tập Chạy', 'Dây Tập Chạy.jpg', 85, 1, '\"Để giải quyết sự băn khoăn cho các khổ chủ: Làm thế nào để đi chơi cho thoải mái mà thú cưng của mình không bị bắt mắt, hay nó chạy đi mất .Chất liệu chắc chắn và thiết kế dày dặn cho độ bền cao, đồng thời tạo cảm giác êm ái khi đeo. Thiết kế khóa giúp bạn dễ dàng đeo hoặc tháo mở dây và vòng một cách nhanh chóng.\"', 3),
-('Long08', 'CL01', 'Nơ Đeo Cổ Chuông', 'Nơ Đeo Cổ Chuông.jpg', 75, 1, 'Vòng đeo được thiết kế nhằm mục đích tránh thất lạc', 3),
-('Long09', 'CL01', 'Vòng Cổ In Hình', 'Vòng Cổ In Hình.jpg', 25, 1, 'Vòng đeo được thiết kế nhằm mục đích tránh thất lạc những hình ảnh vô cùng dễ thương', 3),
-('Long10', 'CL03', 'Lồng Nhà Dẻo', 'Lồng Nhà Dẻo.jpg', 320, 5, 'Bánh xe chạy đồ chơi, đường kính 10cm, giúp Hamster vừa sinh hoạt vừa vui chơi giải trí.Thiết bị hỗ trợ gắn bánh xe vào lồng Khay đựng thức ăn cho Hamster.', 3),
-('Long11', 'CL03', 'Lồng Sân Chơi Nhỏ', 'Lồng Sân Chơi Nhỏ.jpg', 240, 6, 'Bánh xe chạy đồ chơi, đường kính 10cm, giúp Hamster vừa sinh hoạt vừa vui chơi giải trí.Thiết bị hỗ trợ gắn bánh xe vào lồng Khay đựng thức ăn cho Hamster.', 3),
-('Long12', 'CL03', 'Lồng Túi Đeo', 'Lồng Túi Đeo.jpg', 160, 4, 'Bánh xe chạy đồ chơi, đường kính 10cm, giúp Hamster vừa sinh hoạt vừa vui chơi giải trí.Thiết bị hỗ trợ gắn bánh xe vào lồng Khay đựng thức ăn cho Hamster.', 3),
-('Long13', 'CL03', 'Lồng Vòm Lớn', 'Lồng Vòm Lớn.jpg', 240, 9, 'Bánh xe chạy đồ chơi, đường kính 10cm, giúp Hamster vừa sinh hoạt vừa vui chơi giải trí.Thiết bị hỗ trợ gắn bánh xe vào lồng Khay đựng thức ăn cho Hamster.', 3),
-('Long14', 'CL03', 'Lồng Xách Tay', 'Lồng Xách Tay.jpg', 180, 3, 'Lồng được thiết kế để xách tay vô cùng tiện lợi', 3),
-('Long15', 'CL04', 'Dây Dắt Vòng Hoa', 'Dây Dắt Vòng Hoa.jpg', 60, 1, 'Phần dây có tay cầm thoải mái , phần vòng cổ có chốt điều chỉnh to- nhỏ, hai phần được nối với nhau bằng khóa inox rất chắc chắn và có thể tháo rời tiện lợi', 3),
-('Long16', 'CL04', 'Vòng Cổ Da Đính Đá', 'Vòng Cổ Da Đính Đá.jpg', 120, 1, 'kích thước 1,5 x 30cm, được làm từ da bò dẻo dài chịu mài mòn cao mà vẫn thoáng khí , tạo cảm giác thoải mái cho vật nuôi khi sử dụng. Móc khóa được làm từ inox,sáng bóng bền đẹp, mang đến vẻ thời trang cho vật nuôi ', 3),
-('Long17', 'CL04', 'Vòng Cổ Đệm Hoa', 'Vòng Cổ Đệm Hoa.jpg', 40, 1, 'size 1.5 cm : 45.000, size 2 cm : 55.000, size 2.5 cm :65.000, size 3 cm : 75.000', 3),
-('Long18', 'CL04', 'Vòng Cổ Đệm', 'Vòng Cổ Đệm.jpg', 50, 1, 'Được làm bằng vải cotton cao cấp tạo cảm giác thoải mái cho thú cưng. Khóa cài được làm bằng inox không gỉ, rất an toàn và dễ sử dụng. Đặc biệt có nhiều màu sắc có thể tùy chỉnh kích thước sử dụng, không bám bụi và mau khô, có lót đệm êm ái', 3),
-('Long19', 'CL04', 'Vòng Cổ SiliCon', 'Vòng Cổ SiliCon.jpg', 40, 1, 'Vòng cổ được làm từ silicon mềm mại, đảm bảo không gây tổn thương cho vật nuôi, đi kèm vòng là chiếc chuông nhỏ phát ra tiếng kêu leng keng vui tai mỗi khi thú nuôi đi lại, vòng cổ có thể điều chỉnh to- nhỏ tùy ứng và có inox để móc vào dây dắt', 3),
-('Long20', 'CL02', 'Lồng Thỏ Loại 1\r\n', '100cm_60cm_30cm.jpg', 170, 2, 'Lồng 2 ngăn dành cho thỏ từ độ tuổi 2 đến 3 tuổi', 3),
-('Long21', 'CL02', 'Lồng Thỏ Loại 2\r\n', '100cm_70cm_30cm.jpg', 180, 3, 'Lồng 2 ngăn dành cho thỏ từ độ tuổi 2 đến 3 tuổi', 3),
-('Long22', 'CL02', 'Lồng Thỏ Loại 3', '120cm_60cm_30cm.jpg', 220, 3, 'Lồng 2 ngăn dành cho thỏ từ độ tuổi 2 đến 3 tuổi', 3),
-('Long23', 'CL02', 'Lồng Thỏ Loại 4', '120cm_60cm_35cm.jpg', 195, 4, 'Lồng 2 ngăn dành cho thỏ từ độ tuổi 2 đến 3 tuổi', 3),
-('Long24', 'CL02', 'Lồng 2 ngăn 5', '120cm_60cm_40cm.jpg', 210, 5, 'Lồng 2 ngăn dành cho thỏ từ độ tuổi 2 đến 3 tuổi', 3);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `phukienkhac`
---
-
-CREATE TABLE `phukienkhac` (
-  `idPhuKienKhac` int(10) NOT NULL,
-  `tenPhuKienKhac` varchar(50) NOT NULL,
-  `hinhPhuKienKhac` varchar(50) NOT NULL,
-  `giaPhuKienKhac` int(10) NOT NULL,
-  `moTaPhuKienKhac` varchar(1000) NOT NULL,
-  `idLoaiSP` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `phukienkhac`
---
-
-INSERT INTO `phukienkhac` (`idPhuKienKhac`, `tenPhuKienKhac`, `hinhPhuKienKhac`, `giaPhuKienKhac`, `moTaPhuKienKhac`, `idLoaiSP`) VALUES
-(1, 'BaoLo Đeo Lồng Chim', 'BaoLo Đeo Lồng Chim.jpg', 160, 'Ba lô được thiết kê đơn giản tiện dụng để có thể đeo lồng chim khi đang chạy xe một mình hoặc là cánh tay của bạn đang bận phải xách vật khác', 4),
-(2, 'Bát Phíp Tròn Chuột', 'Bát Phíp Tròn Chuột.jpg', 30, 'Bát được thiết kế dùng để đựng thức ăn cho các bé chuột ', 4),
-(3, 'Bát Sứ Tròn Chuột ', 'Bát Sứ Tròn Chuột .jpg', 15, 'Bát được thiết kế để đựng thức ăn , Bát được làm từ sứ rất kiểu cách', 4),
-(4, 'Máng Sành Thỏ', 'Máng Sành Thỏ.jpg', 15, 'Máng dành cho thỏ ăn sẽ giúp các bạn không phải đau đầu trong việc nghĩ nên lấy vật gì để đựng đồ ăn cho thỏ nữa đúng không nào. Chúng tôi cung cấp hai loại máng thỏ. Trên đây là máng làm từ vật liệu Sành. Các bạn có thể tham khảo', 4),
-(5, 'Máng Tôn Thỏ', 'Máng Tôn Thỏ.jpg', 15, 'Máng dành cho thỏ ăn sẽ giúp các bạn không phải đau đầu trong việc nghĩ nên lấy vật gì để đựng đồ ăn cho thỏ nữa đúng không nào. Chúng tôi cung cấp hai loại máng thỏ. Trên đây là máng làm từ vật liệu tôn.Các bạn có thể tham khảo', 4),
-(6, 'Móc Lồng Chim', 'Móc Lồng Chim.jpg', 75, 'Trong quá trình sử dụng có thể thay đổi nhiều loại móc cho lồng chim thì quả là một điều thú vị cho các bạn đam mê thú chơi chim đúng không nào . Hôm nay chúng ta mang đến một sản phẩm mới về móc lồng chim nhằm phục vụ thêm nhu cầu của các bạn', 4),
-(7, 'VanInox Thỏ Nước', 'VanInox Thỏ Nước.jpg', 10, 'Nhằm mục đích để cho các bé thỏ có thể uống nước tiện lợi hơn thì chúng tôi còn bán thêm các loại van dành riêng cho các bé thỏ ', 4),
-(8, 'Van Đồng Thỏ Nước', 'VanĐồng Thỏ Nước.jpg', 3, 'Nhằm mục đích để cho các bé thỏ có thể uống nước tiện lợi hơn thì chúng tôi còn bán thêm các loại van dành riêng cho các bé thỏ ', 4);
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `taikhoan`
 --
 
@@ -467,49 +391,6 @@ CREATE TABLE `thongbao` (
 INSERT INTO `thongbao` (`IDNews`, `icon`, `TieuDe`, `NoiDung`) VALUES
 (1, 'sale2.png', '[Thông báo] Big sale ra đời của websie', 'Nhân dịp website Điện tử Product vào hoạt động, Điện tử Product mở chương trình khuyến mãi: Giảm từ 30% các loại mặt hàng trong shop'),
 (2, 'sale.png', '[Sale] Giảm 20% các mặt hàng trong Thiết bị âm thanh', 'Giảm ngay 20% khi đặt mua các sản phẩm có trong danh mục thiết bị âm thanh, miễn phí vận chuyển cho nội thành phố Hồ Chí Minh');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `thucan`
---
-
-CREATE TABLE `thucan` (
-  `idThucAn` varchar(10) NOT NULL,
-  `idCL` varchar(10) NOT NULL,
-  `tenThucAn` varchar(50) NOT NULL,
-  `hinhThucAn` varchar(30) NOT NULL,
-  `giaThucAn` int(10) NOT NULL,
-  `moTaThucAn` varchar(1000) NOT NULL,
-  `idLoaiSP` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `thucan`
---
-
-INSERT INTO `thucan` (`idThucAn`, `idCL`, `tenThucAn`, `hinhThucAn`, `giaThucAn`, `moTaThucAn`, `idLoaiSP`) VALUES
-('TA01', 'CL05', 'Cám Chào Mào', 'camchaomao.jpg', 35, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA02', 'CL05', 'Cám Chích Chòe', 'camchicchoe.jpg', 55, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA03', 'CL05', 'Cám Họa Mi', 'camhoami.jpg', 55, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA04', 'CL05', 'Cám Vành Khuyên ', 'camvanhkhuyen.jpg', 65, 'Tăng chất sơ cân bằng tiêu hóa\r\n', 2),
-('TA05', 'CL01', '.Cookie Xương', 'cookiexuong.jpg', 10, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA06', 'CL01', 'RoYal Canin', 'royalcanin.jpg', 135, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA07', 'CL01', 'Thanh Gân Bò', 'thanhganbo.jpg', 55, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA08', 'CL01', 'Thức Ăn Huấn Luyện Vị Gà', 'thucanhuanluyenviga.jpg', 25, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA09', 'CL03', 'Bánh Trứng Alex', 'banhtrungalex.jpg', 40, 'Tăng chất đạm cân bằng tiêu hóa', 2),
-('TA10', 'CL03', 'Đu Đủ Dẻo', 'dududeo.jpg', 40, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA11', 'CL03', 'Dứa Dẻo', 'duadeo.jpg', 40, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA12', 'CL03', 'Xương Sữa', 'xuongsua.jpg', 50, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA13', 'CL04', 'PateRoYal', 'PateRoYal.jpg', 45, 'Tăng chất sơ cân bằng tiêu hóa', 2),
-('TA14', 'CL04', 'Thức Ăn Dinh Dưỡng Cao Vị Heo', 'thucanadinhduong Cao Vị Heo.', 45, 'Tăng  cân bằng tiêu hóa', 2),
-('TA15', 'CL04', 'Thức Ăn Sẵn Thịt Gà', 'Thức Ăn Sẵn Thịt Gà.jpg', 32, 'Tăng  cân bằng tiêu hóa', 2),
-('TA16', 'CL04', 'Thức Ăn Snacks', 'Thức Ăn Snacks.jpg', 95, 'Tăng  cân bằng tiêu hóa', 2),
-('TA17', 'CL02', 'Cỏ nén nâu', 'conennau.jpg', 150, 'Đối với thỏ con từ 2 tháng tuổi bạn nên tập ăn', 2),
-('TA18', 'CL02', 'Thức ăn nén thanh', 'thucannenthanhvitapol.jpg', 120, 'Giúp pet mài răng tốt', 2),
-('TA19', 'CL02', 'Cỏ khô GEX TYMOTHY ', 'cokhogex.jpg', 295, 'Ngăn ngừa các bệnh tiêu hóa đường ruột', 2),
-('TA20', 'CL02', 'Cỏ nén WEIOUS ', 'thucannenvien.jpg', 50, 'Cung cấp đủ dinh dưỡng cho Thỏ', 2),
-('TA21', 'CL03', 'Thức ăn nén thanh', 'thucannenthanhvitapol.jpg', 120, 'Giúp pet mài răng tốt', 2);
 
 -- --------------------------------------------------------
 
@@ -653,20 +534,6 @@ ALTER TABLE `loaisanpham`
   ADD PRIMARY KEY (`idLoaiSP`);
 
 --
--- Chỉ mục cho bảng `longthu`
---
-ALTER TABLE `longthu`
-  ADD PRIMARY KEY (`idLongThu`),
-  ADD KEY `idloaisp_long_frkey` (`idLoaiSP`);
-
---
--- Chỉ mục cho bảng `phukienkhac`
---
-ALTER TABLE `phukienkhac`
-  ADD PRIMARY KEY (`idPhuKienKhac`),
-  ADD KEY `idloaisp_pkk_frkey` (`idLoaiSP`);
-
---
 -- Chỉ mục cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
@@ -678,13 +545,6 @@ ALTER TABLE `taikhoan`
 --
 ALTER TABLE `thongbao`
   ADD PRIMARY KEY (`IDNews`);
-
---
--- Chỉ mục cho bảng `thucan`
---
-ALTER TABLE `thucan`
-  ADD PRIMARY KEY (`idThucAn`),
-  ADD KEY `idloaisp_thucan_frkey` (`idLoaiSP`);
 
 --
 -- Chỉ mục cho bảng `thunuoi`
@@ -728,12 +588,6 @@ ALTER TABLE `loaisanpham`
   MODIFY `idLoaiSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `phukienkhac`
---
-ALTER TABLE `phukienkhac`
-  MODIFY `idPhuKienKhac` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
@@ -772,24 +626,6 @@ ALTER TABLE `hinhthu`
 --
 ALTER TABLE `khachhang`
   ADD CONSTRAINT `IDUser_FRK` FOREIGN KEY (`IDUser`) REFERENCES `taikhoan` (`IDUser`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `longthu`
---
-ALTER TABLE `longthu`
-  ADD CONSTRAINT `idloaisp_long_frkey` FOREIGN KEY (`idLoaiSP`) REFERENCES `loaisanpham` (`idLoaiSP`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `phukienkhac`
---
-ALTER TABLE `phukienkhac`
-  ADD CONSTRAINT `idloaisp_pkk_frkey` FOREIGN KEY (`idLoaiSP`) REFERENCES `loaisanpham` (`idLoaiSP`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `thucan`
---
-ALTER TABLE `thucan`
-  ADD CONSTRAINT `idloaisp_thucan_frkey` FOREIGN KEY (`idLoaiSP`) REFERENCES `loaisanpham` (`idLoaiSP`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Các ràng buộc cho bảng `yeuthich`

@@ -1,5 +1,5 @@
 <?php
-//Các hàm in danh sách sản phẩm
+
 
     function getListThuNuoi($link,$idCL){
         $sql = "select * from thunuoi a, loai b where a.idLoai = b.idLoai and b.idCL = '$idCL'";
