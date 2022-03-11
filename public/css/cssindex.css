@@ -137,7 +137,7 @@ a:hover {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-weight: bold;
 	font-size: 15px;
-	background: #39F;
+	background: #ff33ff;
 	float: left;
 }
 .menu-ngang{
@@ -199,7 +199,7 @@ a:hover {
 	color: #666;
 }
 .menuBox li:hover {
-	background-color: #0099FF;
+	background-color: #f9c;
 }
 .menuBox a:hover {
 	color: #FFF;
@@ -374,19 +374,19 @@ left :-400%;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-weight: bold;
 	font-size: 17px;
-	background: #03F;
+	background: #ff33ff;
 	float: left;
 	}
 .title-sanpham{
 	margin-top:20px;
 	height: 40px;
-	background-color:#0099FF;
+	background-color:#ff99cc;
 		}
 .arrow{
 	width: 0; 
     height: 0; 
 	border: solid 20px;
-    border-left-color:#03F;
+    border-left-color:#ff33ff;
 	border-top-color:transparent;
     border-right-color: transparent;    
     border-bottom-color: transparent;
@@ -482,12 +482,6 @@ left :-400%;
 	background-image: none;
 	white-space: normal;
 	}
-/*.img-sanPham img{*/
-	/*width:200px;*/
-	/*height:200px ;*/
-	/*margin: auto;*/
-
-/*}*/
 .title-sp{
 	height:50px;
 	overflow:hidden;
@@ -566,12 +560,12 @@ a{
 	font-size:16px;
 	position:relative;
 	padding-top:10px;
-	color:#0397d6;
+	color:#000;
 	padding-left:5px;
 }
 .cayThuMuc .node-thumuc a{
 	text-decoration: none;
-	color: #0397d6;
+	color: #000;
 }
 .hinhanh-sp{
 	width:500px;
@@ -665,7 +659,7 @@ a{
 	text-transform: uppercase;
 }
 .loaithu{
-	color: deepskyblue;
+	color: #000;
 }
 .sl{ float:left;}
 .sl button{
@@ -687,8 +681,9 @@ a{
 .tieude-sptt{
 	font-family:Tahoma, Geneva, sans-serif;
 	font-size:24px;
-	color:#F00;
+	color:#fff;
 	margin-bottom: 20px;
+	background: #f3f;
 }
 
 .add-gio{
@@ -699,6 +694,7 @@ a{
 	padding:8px;
 	position:relative;
 	top:-5px;
+	background: #f3f;
 }
 .add-gio a{
 	height:40px;
@@ -729,12 +725,6 @@ a{
 	0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
 	50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
 	100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
-}
-.add-gio {
-	-webkit-animation: glowing 1500ms infinite;
-	-moz-animation: glowing 1500ms infinite;
-	-o-animation: glowing 1500ms infinite;
-	animation: glowing 1500ms infinite;
 }
 /*Trang gio hang---------------------------------------------------------------------------------------*/
 

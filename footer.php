@@ -8,13 +8,12 @@
             <li class="menuFooter">&emsp;<a href="gioithieu.php" class="format-url">Giới Thiệu</a></li>
             <li class="menuFooter">&emsp;<a href="sanpham.php" class="format-url">Sản phẩm</a></li>
             <li class="menuFooter">&emsp;<a href="#" class="format-url">Tin Tức</a></li>
-            <li class="menuFooter">&emsp;<a href="tel:0989954169" class="format-url">Liên Hệ</a></li>
           </ul>
         </div>
-        <div class="footer-container">
+        <div class="footer-container" style="background:#f9c">
           <ul class="footer-table-1">
             <h3> Đại Học Thủy Lợi</h3>
-            <li><img src="images/icon/vitri.png" width="20" height="20"/>&emsp;Đường 75 Tây Sơn,Đống Đa, Hà Nội </li>
+            <li><img src="images/icon/vitri.png" width="20" height="20"/>&emsp;Đường 175 Tây Sơn,Đống Đa, Hà Nội </li>
             <li><img src="images/icon/icon-dienthoai.png" width="20" height="20"/>&emsp;Hotline :123456789</li>
             <li><img src="images/icon/icon-phone-new.gif" width="20" height="20"/>&emsp; Điện thoại : 1234.5678.910</li>
             <li><img src="images/icon/mail.png" width="20" height="20"/>&emsp;cauvangshop.com</li>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 08, 2022 lúc 03:23 PM
+-- Thời gian đã tạo: Th3 10, 2022 lúc 05:16 PM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.1
 
@@ -41,9 +41,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`IDAD`, `Hoten`, `SDT`, `Email`, `MatKhau`, `ChucVu`) VALUES
-(1, 'Admin', '0989954169', 'hoanglong01@gmail.com', '123456a', 0),
-(2, 'Admin', '0989954168', 'thuchoang01@gmail.com', '123456b', 0),
-(3, 'Admin', '0989954167', 'minhtinh01@gmail.com', '123456c', 0)
+(1, 'Long', '0989954169', 'hoanglong01@gmail.com', '123456a', 0),
+(2, 'Thức', '0989954168', 'thuchoang01@gmail.com', '123456b', 0),
+(3, 'Tình', '0989954167', 'minhtinh01@gmail.com', '123456c', 0);
 
 -- --------------------------------------------------------
 
@@ -278,9 +278,9 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`IDKH`, `HoTen`, `Email`, `SDT`, `DiaChi`, `IDUser`) VALUES
-(1, 'Hoàng Văn Lâm', 'hoangvanlamcntt@gmail.com', '0989954169', 'quan12', 1),
-(2, 'Na', '123@gmail.com', '0123456', 'Tô Ký', 2),
-(4, 'Tí', '123@abc.com', '0123', 'abc', 4);
+(1, 'Văn A', 'VanA@gmail.com', '0989954169', 'Ha Noi', 1),
+(2, 'Văn B', 'VanB@gmail.com', '0123456', 'Nam Dinh', 2),
+(4, 'Văn C', 'VanC@gmail.com', '0123', 'Thai Binh', 4);
 
 -- --------------------------------------------------------
 
@@ -344,10 +344,7 @@ CREATE TABLE `loaisanpham` (
 --
 
 INSERT INTO `loaisanpham` (`idLoaiSP`, `tenLoaiSP`) VALUES
-(1, 'Thú nuôi'),
-(2, 'Thức ăn'),
-(3, 'Lồng thú'),
-(4, 'Phụ kiện khác');
+(1, 'Thú nuôi');
 
 -- --------------------------------------------------------
 
@@ -367,30 +364,9 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`IDUser`, `Email`, `SDT`, `MatKhau`) VALUES
-(1, 'hoangvanlamcntt@gmail.com', '0989954169', '123456'),
-(2, '123@gmail.com', '0123456', '123456'),
-(4, '123@abc.com', '0123', '123456');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `thongbao`
---
-
-CREATE TABLE `thongbao` (
-  `IDNews` int(11) NOT NULL,
-  `icon` varchar(20) NOT NULL,
-  `TieuDe` text NOT NULL,
-  `NoiDung` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `thongbao`
---
-
-INSERT INTO `thongbao` (`IDNews`, `icon`, `TieuDe`, `NoiDung`) VALUES
-(1, 'sale2.png', '[Thông báo] Big sale ra đời của websie', 'Nhân dịp website Điện tử Product vào hoạt động, Điện tử Product mở chương trình khuyến mãi: Giảm từ 30% các loại mặt hàng trong shop'),
-(2, 'sale.png', '[Sale] Giảm 20% các mặt hàng trong Thiết bị âm thanh', 'Giảm ngay 20% khi đặt mua các sản phẩm có trong danh mục thiết bị âm thanh, miễn phí vận chuyển cho nội thành phố Hồ Chí Minh');
+(1, 'VanA@gmail.com', '0989954169', 01234),
+(2, 'VanB@gmail.com', '0123456', 1234),
+(4, 'VanC@gmail.com', '0123', 12345);
 
 -- --------------------------------------------------------
 
@@ -541,12 +517,6 @@ ALTER TABLE `taikhoan`
   ADD UNIQUE KEY `email` (`Email`);
 
 --
--- Chỉ mục cho bảng `thongbao`
---
-ALTER TABLE `thongbao`
-  ADD PRIMARY KEY (`IDNews`);
-
---
 -- Chỉ mục cho bảng `thunuoi`
 --
 ALTER TABLE `thunuoi`
@@ -567,7 +537,7 @@ ALTER TABLE `yeuthich`
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `IDAD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDAD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `hoadon`
@@ -579,7 +549,7 @@ ALTER TABLE `hoadon`
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `IDKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IDKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `loaisanpham`
@@ -591,13 +561,7 @@ ALTER TABLE `loaisanpham`
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `IDUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT cho bảng `thongbao`
---
-ALTER TABLE `thongbao`
-  MODIFY `IDNews` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IDUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `thunuoi`

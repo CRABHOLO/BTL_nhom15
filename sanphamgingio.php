@@ -19,6 +19,6 @@
     
     ?>
   <button class="muahang">
-  <img src="images/icon/giohang.png" class="icon"/>
-      Mua Hàng</button>
+  <a href="#"><img src="images/icon/giohang.png" class="icon"/>
+      Mua Hàng</button></a>
 </div>

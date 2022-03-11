@@ -11,7 +11,7 @@
                             $tt = mysqli_query($link,$sql);
                             echo mysqli_num_rows($tt);
                         }else echo 0;?>
-                    </div><img src="images/icon/thongBao.png" class="icon"/></div>Thông báo của tôi<?php if(isset($_SESSION['username'])){?></a><?php }?> </div>
+                    </div></div>  <?php if(isset($_SESSION['username'])){?></a><?php }?> </div>
         <?php if(!isset($_SESSION['username'])){?>
         <div class="box" id="hover-dangnhap"><img src="images/icon/account.png" class="icon"/>Đăng nhập
             <div class="arrow-top"></div>
@@ -42,7 +42,7 @@
         <div class="box" id="boxGioHang"><div id ="imgCart">
                 <a href="yeuthich.php" style="color: #FFFFFF;display: block">
                     <img src="images/icon/giohang.png" class="icon"/>Giỏ hàng </a>
-            </div><div id="soLuongHang" style="color: #0099FF;"><?php
+            </div><div id="soLuongHang" style="color: #000;"><?php
                 if(!isset($_SESSION['yeuthich'])){
                     echo 0;
                 }
@@ -58,8 +58,8 @@
     <div class="menu-ngang">
       <ul>
         <li><a href="index.php" class="format-url" ><b>Trang chủ</b></a></li>
-        <li><a href="gioithieu.php" class="format-url">Giới thiệu</a></li>
         <li><a href="sanpham.php?pageall=0" class="format-url">Sản phẩm</a></li> 
+        <li><a href="gioithieu.php" class="format-url">Giới thiệu</a></li>
         
       </ul>
     </div>
