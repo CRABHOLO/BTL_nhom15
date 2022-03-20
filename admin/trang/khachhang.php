@@ -45,7 +45,6 @@
                                 <td><?php echo $row['DiaChi'] ?></td>
                                 <td class="center"><?php echo $row['IDUser'] ?></td>
                                 <td style="text-align: center; ">
-                                    <a href="?mod=suaKhachHang&&IDKH=<?php echo $row['IDKH']?>" class="edit" id="editKH" data-toggle="modal" data-idKH="<?php echo $row['IDKH']; ?>"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                     <a style="cursor: pointer" class="delete" onclick="confirmXoaKH(<?php echo $row['IDUser']?>)" ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>

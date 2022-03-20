@@ -10,7 +10,7 @@ else{
     header('location: login.php');
 }?>
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.php">Petshop</a>
+        <a class="navbar-brand" href="index.php">Cậu Vàng Shop</a>
     </div>
 
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

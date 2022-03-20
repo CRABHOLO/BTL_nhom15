@@ -4,9 +4,9 @@
         <ul class="nav" id="side-menu">
             <li class="sidebar-search">
                 <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                    <!-- <input type="text" class="form-control" placeholder="Tìm kiếm..."> -->
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button">
+                        <!-- <button class="btn btn-primary" type="button"> -->
                             <i class="fa fa-search"></i>
                         </button>
                     </span>
@@ -14,12 +14,12 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.php?mod=bangdieukhien" class="active"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
+                <!-- <a href="index.php?mod=bangdieukhien" class="active"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a> -->
 
             </li>
 
             <li class="">
-                <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-table fa-fw"></i>Bảng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="?mod=khachhang" id="table-list" style="cursor: pointer">Khách hàng</a>
@@ -27,12 +27,7 @@
                     <li>
                         <a href="?mod=thunuoi" id="thunuoi-list"  style="cursor: pointer">Thú nuôi</a>
                     </li>
-                    <li>
-                        <a href="?mod=phanquyen"  style="cursor: pointer">Phân quyền</a>
-                    </li>
-                    <li>
-                        <a href="?mod=muahang"  style="cursor: pointer">Mua hàng</a>
-                    </li>
+                   
                 </ul>
             </li>
 

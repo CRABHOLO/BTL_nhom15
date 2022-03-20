@@ -21,9 +21,7 @@
         <div class="menuBox">
             <ul class="menuKH">
                 <a href="?mod=thongtinUser" style="color: #080808"><li id="thongtinKH"> Thông tin khách hàng</li></a>
-                <a href="?mod=thongBao" style="color: #080808"> <li id="thongBaoKH">Thông báo của tôi</li></a>
-                <a href="?mod=donHang" style="color: #080808"> <li id="donHangCT">Đơn hàng của tôi</li></a>
-
+               
             </ul>
         </div>
         <div id="body-kh">

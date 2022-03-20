@@ -22,15 +22,12 @@
     <div id="listSanPham">
 
         <?php
-        if(isset($_GET['thucan'])){
-            $sql = getSQLThucAn();
-            printListThucAn(mysqli_query($link,$sql));
-        }
-        else{
+        
             $sql = getSQLSanPham();
-        //Phân trang cho san pham
+       // Phân trang cho san pham
         $numSP = 16;
-        include ('phantrang.php');}
+        include ('phantrang.php');
+    
         ?>
     </div>
     <div id="footer">

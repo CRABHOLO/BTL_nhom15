@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Startmin - Bootstrap Admin Theme</title>
+    <title>Admin Shop Cậu Vàng</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
             <?php //include 'bangdieukhien.php'?>
             <?php
             $mod=@$_GET['mod'];
-            if(empty($mod)) $mod="bangdieukhien";
+            if(empty($mod)) $mod="khachhang";
             include ("{$mod}.php");
             ?>
         </div>

@@ -17,7 +17,7 @@
          $canNang = $_POST['canNang'];
          $giongThu = $_POST['cmbGiong'];
 
-         $target_path = $_SERVER['DOCUMENT_ROOT'] . '/petshop/images/thunuoi/';
+         $target_path = $_SERVER['DOCUMENT_ROOT'] . '/BTL_nhom15/images/thunuoi/';
 
          $flag = 1;
 

@@ -47,7 +47,7 @@
                     <div class="lineDN">
                         <button type="button" name="btnDangNhap" id="btnDangNhap" style="margin-bottom:10px;">Đăng
                             nhập
-                        </button>
+                        </button>   
                         <br/>
                         Quên mật khẩu nhấn vào <a class="format-url" id="layPass"
                                                   style="color:#00F;font-weight:bolder;cursor: pointer">đây</a></div>

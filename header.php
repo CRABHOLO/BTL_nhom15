@@ -6,11 +6,8 @@
 			<button id="btnSearch" type="submit"><img src="images/icon/search.png" width="40px" height="40px"/></button>
 		</form>
         <div class="box"><?php if(isset($_SESSION['username'])){?><a href="khachhang.php" class="xoaDinhDangLink" style="color: white"><?php }?><div id="icon-tbao"><div id="soThongBao">
-                        <?php if(isset($_SESSION['username'])){
-                            $sql = "select * from thongbao";
-                            $tt = mysqli_query($link,$sql);
-                            echo mysqli_num_rows($tt);
-                        }else echo 0;?>
+                        <?php if(isset($_SESSION['username']))
+                        ?>
                     </div></div>  <?php if(isset($_SESSION['username'])){?></a><?php }?> </div>
         <?php if(!isset($_SESSION['username'])){?>
         <div class="box" id="hover-dangnhap"><img src="images/icon/account.png" class="icon"/>Đăng nhập
@@ -30,8 +27,7 @@
 
         <div class="box" id="da-dangnhap" style="display: block"><img src="images/icon/account.png" class="icon"/>Chào <div id="nameKH"><?php echo $row[0];?></div>
             <div class="arrow-top"></div>
-            <ul class="sub-menu">
-                <a href="khachhang.php"> <li id="taikhoan">Tài khoản của tôi</li></a>
+            <ul class="sub-menu">               
                 <a href="xuLyLog.php?dangxuat=yes"><li id="dangky">Đăng xuất</li></a>
             </ul>
         </div>
